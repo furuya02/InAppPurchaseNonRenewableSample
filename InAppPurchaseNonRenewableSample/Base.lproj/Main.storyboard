@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5En-I8-k6x">
+                                <rect key="frame" x="164" y="33" width="46" height="30"/>
+                                <state key="normal" title="購入"/>
+                                <connections>
+                                    <action selector="tapPurchaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unl-bu-ZgT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-0e-Jtp">
+                                <rect key="frame" x="130" y="80" width="114" height="30"/>
+                                <state key="normal" title="リストア"/>
+                                <connections>
+                                    <action selector="tapRestoreButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gf1-wl-L0X"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qiq-f2-MCG">
+                                <rect key="frame" x="10" y="170" width="355" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z2L-0e-Jtp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1BU-dT-htk"/>
+                            <constraint firstItem="qiq-f2-MCG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Iyt-cw-2xV"/>
+                            <constraint firstItem="z2L-0e-Jtp" firstAttribute="top" secondItem="5En-I8-k6x" secondAttribute="bottom" constant="30" id="UEC-gF-398"/>
+                            <constraint firstAttribute="trailing" secondItem="qiq-f2-MCG" secondAttribute="trailing" constant="10" id="c8M-6I-gn8"/>
+                            <constraint firstItem="qiq-f2-MCG" firstAttribute="top" secondItem="z2L-0e-Jtp" secondAttribute="bottom" constant="30" id="eWG-d4-zkE"/>
+                            <constraint firstItem="5En-I8-k6x" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="mOL-kt-aic"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qiq-f2-MCG" secondAttribute="bottom" constant="30" id="mrk-0v-iEZ"/>
+                            <constraint firstItem="5En-I8-k6x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYI-Wr-h0l"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textView" destination="qiq-f2-MCG" id="3bW-sM-bWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="429.5"/>
         </scene>
     </scenes>
 </document>

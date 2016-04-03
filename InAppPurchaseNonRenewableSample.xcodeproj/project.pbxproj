@@ -29,6 +29,7 @@
 		D7DA13FB1CB033C700355DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7DA13FE1CB033C700355DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7DA14001CB033C700355DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7FB67C51CB15C1B00ACE64D /* InAppPurchaseNonRenewableSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = InAppPurchaseNonRenewableSample.entitlements; sourceTree = "<group>"; };
 		E6AAE6DCFC4E61AA37D49C45 /* Pods-InAppPurchaseNonRenewableSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InAppPurchaseNonRenewableSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-InAppPurchaseNonRenewableSample/Pods-InAppPurchaseNonRenewableSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +83,7 @@
 		D7DA13EE1CB033C700355DA5 /* InAppPurchaseNonRenewableSample */ = {
 			isa = PBXGroup;
 			children = (
+				D7FB67C51CB15C1B00ACE64D /* InAppPurchaseNonRenewableSample.entitlements */,
 				D7DA13F21CB033C700355DA5 /* AppDelegate.h */,
 				D7DA13F31CB033C700355DA5 /* AppDelegate.m */,
 				D7DA13F51CB033C700355DA5 /* ViewController.h */,
@@ -137,6 +139,11 @@
 				TargetAttributes = {
 					D7DA13EB1CB033C700355DA5 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -292,6 +299,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5898f6c7-9c6b-4b05-8c8f-8d10b2d8dde4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -329,6 +337,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "5898f6c7-9c6b-4b05-8c8f-8d10b2d8dde4";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -339,10 +348,14 @@
 			baseConfigurationReference = 3E920AB90459284B9D9DBA66 /* Pods-InAppPurchaseNonRenewableSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InAppPurchaseNonRenewableSample/InAppPurchaseNonRenewableSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InAppPurchaseNonRenewableSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sapporoworks.InAppPurchaseNonRenewableSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -351,10 +364,14 @@
 			baseConfigurationReference = E6AAE6DCFC4E61AA37D49C45 /* Pods-InAppPurchaseNonRenewableSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = InAppPurchaseNonRenewableSample/InAppPurchaseNonRenewableSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InAppPurchaseNonRenewableSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ne.sapporoworks.InAppPurchaseNonRenewableSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
